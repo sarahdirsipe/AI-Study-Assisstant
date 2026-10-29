@@ -1,0 +1,32 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Local embedding cache
+.rag_cache/
+
+# Leftovers from earlier days
+chroma_db/
+old/
+
+# Sample PDFs are not redistributed
+sample_pdfs/*.pdf
+!sample_pdfs/.gitkeep
+
+# Secrets and local config
+.env
+.env.*
+*.key
+
+# Editors, logs and OS files
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db

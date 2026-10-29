@@ -1,0 +1,764 @@
+{
+  "settings": {
+    "llm_model": "qwen2.5:3b",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "num_ctx": 3072,
+    "num_predict": 320,
+    "top_k": 3,
+    "compare_top_k": 4,
+    "min_similarity": 0.25,
+    "weak_similarity": 0.35,
+    "relative_cutoff": 0.75,
+    "weak_support": 0.3,
+    "llm_cold_start_s": 8.58209910000005
+  },
+  "results": [
+    {
+      "id": "q01",
+      "type": "direct",
+      "question": "What are the main steps of the K-means algorithm?",
+      "answerable": true,
+      "expected_pages": [
+        "Clustering.pdf p5"
+      ],
+      "routed_to": "retrieve+answer",
+      "retrieval_status": "ok",
+      "retrieval_s": 0.01883520000046701,
+      "answer_s": 19.976464100000157,
+      "total_s": 19.996564500001114,
+      "answer_status": "answered_with_warnings",
+      "answer": "The main steps of the K-means algorithm are:\n1. The first step chooses the initial centroids, with the most basic method being to choose samples from the dataset.\n2. After initialization, K-means consists of looping between the two other steps.\n3. The first step assigns each sample to its nearest centroid.\n4. The second step creates new centroids by taking the mean value of all of the samples assigned to each previous centroid.\n5. The difference between the old and the new centroids are computed.\n6. The algorithm repeats these last two steps until this value is less than a threshold. [Source 1: Clustering.pdf, page 5]",
+      "message": "",
+      "cited_pages": [
+        "Clustering.pdf p5"
+      ],
+      "cited_on_labeled_pages": 1,
+      "notes": [
+        "5 sentence(s) have no citation and should not be trusted as coming from your PDFs."
+      ],
+      "retrieved": [
+        {
+          "source": "Clustering.pdf",
+          "page": 5,
+          "similarity": 0.7755,
+          "sent_to_llm": true,
+          "text": " For more detailed descriptions of the issues shown above and how to address them, refer to the examples Demonstration of k-means assumptions and Selecting the number of clusters with silhouette analysis on KMeans clustering. K-means is often referred to as Lloyd’s algorithm. In basic terms, the algorithm has three steps. The first step chooses the initial centroids, with the most basic method being to choose samples from the dataset . After initialization, K-means consists of looping between the two other steps. The first step assigns each sample to its nearest centroid. The second step creates new centroids by taking the mean value of all of the samples assigned to each previous centroid. The difference between the old and the new centroids are computed and the algorithm repeats these last two steps until this value is less than a threshold. In other words, it repeats until the centroids do not"
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 4,
+          "similarity": 0.6866,
+          "sent_to_llm": true,
+          "text": " mixture model with equal covariance per component. Transductive clustering methods (in contrast to inductive clustering methods) are not designed to be applied to new, unseen data. Examples Inductive Clustering: An example of an inductive clustering model for handling new data. 2.3.2. K-means The KMeans algorithm clusters data by trying to separate samples in n groups of equal variance, minimizing a criterion known as the inertia or within-cluster sum-of-squares (see below). This algorithm requires the number of clusters to be specified. It scales well to large numbers of samples and has been used across a large range of application areas in many different fields. The k-means algorithm divides a set of samples into disjoint clusters , each described by the mean of the samples in the cluster. The means are commonly called the cluster “centroids”; note that they are not, in general, points from , although they live in the"
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 6,
+          "similarity": 0.6647,
+          "sent_to_llm": true,
+          "text": " The algorithm can also be understood through the concept of Voronoi diagrams. First the Voronoi diagram of the points is calculated using the current centroids. Each segment in the Voronoi diagram becomes a separate cluster. Secondly, the centroids are updated to the mean of each segment. The algorithm then repeats this until a stopping criterion is fulfilled. Usually, the algorithm stops when the relative decrease in the objective function between iterations is less than the given tolerance value. This is not the case in this implementation: iteration stops when centroids move less than the tolerance. Given enough time, K-means will always converge, however this may be to a local minimum. This is highly dependent on the initialization of the centroids. As a result, the computation is often done several times, with different initializations of the centroids. One method to help address this issue is the k-means++ initialization scheme, which"
+        }
+      ],
+      "attempts": 1,
+      "retried": false,
+      "ollama_wall_s": 19.971648799997638,
+      "ollama_prompt_s": 5.064178,
+      "ollama_generation_s": 14.838911,
+      "raw_replies": [
+        "The main steps of the K-means algorithm are:\n1. The first step chooses the initial centroids, with the most basic method being to choose samples from the dataset.\n2. After initialization, K-means consists of looping between the two other steps.\n3. The first step assigns each sample to its nearest centroid.\n4. The second step creates new centroids by taking the mean value of all of the samples assigned to each previous centroid.\n5. The difference between the old and the new centroids are computed.\n6. The algorithm repeats these last two steps until this value is less than a threshold. [Source 1]"
+      ],
+      "summary": null,
+      "error": null,
+      "auto_first_pass": "answered (review faithfulness)"
+    },
+    {
+      "id": "q02",
+      "type": "direct",
+      "question": "How does K-means++ initialization help the K-means algorithm?",
+      "answerable": true,
+      "expected_pages": [
+        "Clustering.pdf p6"
+      ],
+      "routed_to": "retrieve+answer",
+      "retrieval_status": "ok",
+      "retrieval_s": 0.024779700001090532,
+      "answer_s": 13.470856200001435,
+      "total_s": 13.495836600002804,
+      "answer_status": "answered_with_warnings",
+      "answer": "K-means++ initialization helps the K-means algorithm by initializing the centroids to be (generally) distant from each other. This is done using the k-means++ initialization scheme, which has been implemented in scikit-learn with the init='k-means++' parameter. This method leads to probably better results than random initialization, as shown in the reference. [Source 1: Clustering.pdf, page 6]",
+      "message": "",
+      "cited_pages": [
+        "Clustering.pdf p6"
+      ],
+      "cited_on_labeled_pages": 1,
+      "notes": [
+        "2 sentence(s) have no citation and should not be trusted as coming from your PDFs."
+      ],
+      "retrieved": [
+        {
+          "source": "Clustering.pdf",
+          "page": 6,
+          "similarity": 0.7303,
+          "sent_to_llm": true,
+          "text": "centroids. As a result, the computation is often done several times, with different initializations of the centroids. One method to help address this issue is the k-means++ initialization scheme, which has been implemented in scikit-learn (use the init='k-means++' parameter). This initializes the centroids to be (generally) distant from each other, leading to probably better results than random initialization, as shown in the reference. Fo detailed examples of comparing different initialization schemes, refer to A demo of K-Means clustering on the handwritten digits data and Empirical evaluation of the impact of k-means initialization. K-means++ can also be called independently to select seeds for other clustering algorithms, see sklearn.cluster.kmeans_plusplus for details and example usage. The algorithm supports sample weights, which can be given by a parameter sample_weight . This allows assigning more weight to some samples when computing cluster centers and values of inertia. For example, assigning a weight of 2 to"
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 5,
+          "similarity": 0.729,
+          "sent_to_llm": true,
+          "text": " For more detailed descriptions of the issues shown above and how to address them, refer to the examples Demonstration of k-means assumptions and Selecting the number of clusters with silhouette analysis on KMeans clustering. K-means is often referred to as Lloyd’s algorithm. In basic terms, the algorithm has three steps. The first step chooses the initial centroids, with the most basic method being to choose samples from the dataset . After initialization, K-means consists of looping between the two other steps. The first step assigns each sample to its nearest centroid. The second step creates new centroids by taking the mean value of all of the samples assigned to each previous centroid. The difference between the old and the new centroids are computed and the algorithm repeats these last two steps until this value is less than a threshold. In other words, it repeats until the centroids do not"
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 4,
+          "similarity": 0.6484,
+          "sent_to_llm": true,
+          "text": " mixture model with equal covariance per component. Transductive clustering methods (in contrast to inductive clustering methods) are not designed to be applied to new, unseen data. Examples Inductive Clustering: An example of an inductive clustering model for handling new data. 2.3.2. K-means The KMeans algorithm clusters data by trying to separate samples in n groups of equal variance, minimizing a criterion known as the inertia or within-cluster sum-of-squares (see below). This algorithm requires the number of clusters to be specified. It scales well to large numbers of samples and has been used across a large range of application areas in many different fields. The k-means algorithm divides a set of samples into disjoint clusters , each described by the mean of the samples in the cluster. The means are commonly called the cluster “centroids”; note that they are not, in general, points from , although they live in the"
+        }
+      ],
+      "attempts": 1,
+      "retried": false,
+      "ollama_wall_s": 13.470463000001473,
+      "ollama_prompt_s": 3.830333,
+      "ollama_generation_s": 9.404132,
+      "raw_replies": [
+        "K-means++ initialization helps the K-means algorithm by initializing the centroids to be (generally) distant from each other. This is done using the k-means++ initialization scheme, which has been implemented in scikit-learn with the init='k-means++' parameter. This method leads to probably better results than random initialization, as shown in the reference. [Source 1]"
+      ],
+      "summary": null,
+      "error": null,
+      "auto_first_pass": "answered (review faithfulness)"
+    },
+    {
+      "id": "q03",
+      "type": "comparison",
+      "question": "Compare standard K-means and Mini-Batch K-means in terms of their steps, speed, and result quality.",
+      "answerable": true,
+      "expected_pages": [
+        "Clustering.pdf p5",
+        "Clustering.pdf p7"
+      ],
+      "routed_to": "retrieve+answer",
+      "retrieval_status": "ok",
+      "retrieval_s": 0.024677500001416774,
+      "answer_s": 33.667357499998616,
+      "total_s": 33.692391299999144,
+      "answer_status": "answered_with_warnings",
+      "answer": "Standard K-means and Mini-Batch K-means both start by choosing initial centroids. Standard K-means selects centroids randomly from the dataset, while Mini-Batch K-means uses random samples from the dataset to form mini-batches.\n\nStandard K-means then assigns each sample to its nearest centroid and recalculates centroids by taking the mean value of all samples assigned to each previous centroid. It repeats these steps until the centroids do not change significantly.\n\nMini-Batch K-means also assigns each sample to its nearest centroid but uses mini-batches of randomly sampled data. This reduces the amount of computation required, making it faster. Despite using mini-batches, Mini-Batch K-means generally produces results that are only slightly worse than the standard algorithm.\n\nIn terms of result quality, both algorithms aim to minimize the inertia or within-cluster sum-of-squares. Standard K-means can converge to a global solution, but Mini-Batch K-means converges to a local solution. Mini-Batch K-means is faster but may not always find the best solution. [Source 1: Clustering.pdf, page 7] [Source 2: Clustering.pdf, page 5]",
+      "message": "",
+      "cited_pages": [
+        "Clustering.pdf p5",
+        "Clustering.pdf p7"
+      ],
+      "cited_on_labeled_pages": 2,
+      "notes": [
+        "9 sentence(s) have no citation and should not be trusted as coming from your PDFs."
+      ],
+      "retrieved": [
+        {
+          "source": "Clustering.pdf",
+          "page": 7,
+          "similarity": 0.7151,
+          "sent_to_llm": true,
+          "text": " Examples Demonstration of k-means assumptions: Demonstrating when k-means performs intuitively and when it does not A demo of K-Means clustering on the handwritten digits data: Clustering handwritten digits 2.3.2.2. Mini Batch K-Means The MiniBatchKMeans is a variant of the KMeans algorithm which uses mini-batches to reduce the computation time, while still attempting to optimise the same objective function. Mini- batches are subsets of the input data, randomly sampled in each training iteration. These mini- batches drastically reduce the amount of computation required to converge to a local solution. In contrast to other algorithms that reduce the convergence time of k-means, mini-batch k-means produces results that are generally only slightly worse than the standard algorithm. The algorithm iterates between two major steps, similar to vanilla k-means. In the first step, samples are drawn randomly from the dataset, to form a mini-batch. These are then assigned to the nearest centroid. In"
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 5,
+          "similarity": 0.5665,
+          "sent_to_llm": true,
+          "text": " For more detailed descriptions of the issues shown above and how to address them, refer to the examples Demonstration of k-means assumptions and Selecting the number of clusters with silhouette analysis on KMeans clustering. K-means is often referred to as Lloyd’s algorithm. In basic terms, the algorithm has three steps. The first step chooses the initial centroids, with the most basic method being to choose samples from the dataset . After initialization, K-means consists of looping between the two other steps. The first step assigns each sample to its nearest centroid. The second step creates new centroids by taking the mean value of all of the samples assigned to each previous centroid. The difference between the old and the new centroids are computed and the algorithm repeats these last two steps until this value is less than a threshold. In other words, it repeats until the centroids do not"
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 4,
+          "similarity": 0.5649,
+          "sent_to_llm": true,
+          "text": " mixture model with equal covariance per component. Transductive clustering methods (in contrast to inductive clustering methods) are not designed to be applied to new, unseen data. Examples Inductive Clustering: An example of an inductive clustering model for handling new data. 2.3.2. K-means The KMeans algorithm clusters data by trying to separate samples in n groups of equal variance, minimizing a criterion known as the inertia or within-cluster sum-of-squares (see below). This algorithm requires the number of clusters to be specified. It scales well to large numbers of samples and has been used across a large range of application areas in many different fields. The k-means algorithm divides a set of samples into disjoint clusters , each described by the mean of the samples in the cluster. The means are commonly called the cluster “centroids”; note that they are not, in general, points from , although they live in the"
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 8,
+          "similarity": 0.553,
+          "sent_to_llm": true,
+          "text": " Examples Comparison of the K-Means and MiniBatchKMeans clustering algorithms: Comparison of KMeans and MiniBatchKMeans Clustering text documents using k-means: Document clustering using KMeans and MiniBatchKMeans based on sparse data Online learning of a dictionary of parts of faces 2.3.3. Affinity Propagation AffinityPropagation creates clusters by sending messages between pairs of samples until convergence. A dataset is then described using a small number of exemplars, which are identified as those most representative of other samples. The messages sent between pairs represent the suitability for one sample to be the exemplar of the other, which is updated in response to the values from other pairs. This updating happens iteratively until convergence, at which point the final exemplars are chosen, and hence the final clustering is given. Affinity Propagation can be interesting as it chooses the number of clusters based on the data provided. For this purpose, the two important parameters are"
+        }
+      ],
+      "attempts": 1,
+      "retried": false,
+      "ollama_wall_s": 33.666772599997785,
+      "ollama_prompt_s": 6.384399,
+      "ollama_generation_s": 27.054218,
+      "raw_replies": [
+        "Standard K-means and Mini-Batch K-means both start by choosing initial centroids. Standard K-means selects centroids randomly from the dataset, while Mini-Batch K-means uses random samples from the dataset to form mini-batches. \n\nStandard K-means then assigns each sample to its nearest centroid and recalculates centroids by taking the mean value of all samples assigned to each previous centroid. It repeats these steps until the centroids do not change significantly.\n\nMini-Batch K-means also assigns each sample to its nearest centroid but uses mini-batches of randomly sampled data. This reduces the amount of computation required, making it faster. Despite using mini-batches, Mini-Batch K-means generally produces results that are only slightly worse than the standard algorithm.\n\nIn terms of result quality, both algorithms aim to minimize the inertia or within-cluster sum-of-squares. Standard K-means can converge to a global solution, but Mini-Batch K-means converges to a local solution. Mini-Batch K-means is faster but may not always find the best solution. [Source 1, Source 2]"
+      ],
+      "summary": null,
+      "error": null,
+      "auto_first_pass": "answered (review faithfulness)"
+    },
+    {
+      "id": "q04",
+      "type": "multi_passage",
+      "question": "How do K-means and Affinity Propagation differ in how they form clusters and determine cluster centers?",
+      "answerable": true,
+      "expected_pages": [
+        "Clustering.pdf p5",
+        "Clustering.pdf p8"
+      ],
+      "routed_to": "retrieve+answer",
+      "retrieval_status": "ok",
+      "retrieval_s": 0.022476400001323782,
+      "answer_s": 21.062577200002124,
+      "total_s": 21.085349099997984,
+      "answer_status": "answered_with_warnings",
+      "answer": "K-means forms clusters by calculating the mean of the points in each cluster to determine the cluster center. It does this repeatedly until the points are in the right cluster or the change in the position of the cluster centers is less than a threshold. On the other hand, Affinity Propagation does not explicitly calculate cluster centers. Instead, it identifies exemplars (points that are most representative of other samples) and uses these exemplars to describe the dataset. The number of clusters is determined based on the data provided, and it sends messages between pairs of samples to decide which sample should be the exemplar of the other. [Source 1: Clustering.pdf, page 8]",
+      "message": "",
+      "cited_pages": [
+        "Clustering.pdf p8"
+      ],
+      "cited_on_labeled_pages": 1,
+      "notes": [
+        "4 sentence(s) have no citation and should not be trusted as coming from your PDFs."
+      ],
+      "retrieved": [
+        {
+          "source": "Clustering.pdf",
+          "page": 8,
+          "similarity": 0.7473,
+          "sent_to_llm": true,
+          "text": " Examples Comparison of the K-Means and MiniBatchKMeans clustering algorithms: Comparison of KMeans and MiniBatchKMeans Clustering text documents using k-means: Document clustering using KMeans and MiniBatchKMeans based on sparse data Online learning of a dictionary of parts of faces 2.3.3. Affinity Propagation AffinityPropagation creates clusters by sending messages between pairs of samples until convergence. A dataset is then described using a small number of exemplars, which are identified as those most representative of other samples. The messages sent between pairs represent the suitability for one sample to be the exemplar of the other, which is updated in response to the values from other pairs. This updating happens iteratively until convergence, at which point the final exemplars are chosen, and hence the final clustering is given. Affinity Propagation can be interesting as it chooses the number of clusters based on the data provided. For this purpose, the two important parameters are"
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 5,
+          "similarity": 0.7081,
+          "sent_to_llm": true,
+          "text": "new centroids are computed and the algorithm repeats these last two steps until this value is less than a threshold. In other words, it repeats until the centroids do not move significantly. K-means is equivalent to the expectation-maximization algorithm with a small, all-equal, diagona covariance matrix. k X 10/19/26, 11:48 AM 2.3. Clustering — scikit-learn 1.9.1 documentation https://scikit-learn.org/stable/modules/clustering.html 5/39"
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 6,
+          "similarity": 0.7058,
+          "sent_to_llm": true,
+          "text": "centroids. As a result, the computation is often done several times, with different initializations of the centroids. One method to help address this issue is the k-means++ initialization scheme, which has been implemented in scikit-learn (use the init='k-means++' parameter). This initializes the centroids to be (generally) distant from each other, leading to probably better results than random initialization, as shown in the reference. Fo detailed examples of comparing different initialization schemes, refer to A demo of K-Means clustering on the handwritten digits data and Empirical evaluation of the impact of k-means initialization. K-means++ can also be called independently to select seeds for other clustering algorithms, see sklearn.cluster.kmeans_plusplus for details and example usage. The algorithm supports sample weights, which can be given by a parameter sample_weight . This allows assigning more weight to some samples when computing cluster centers and values of inertia. For example, assigning a weight of 2 to"
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 7,
+          "similarity": 0.6908,
+          "sent_to_llm": true,
+          "text": "major steps, similar to vanilla k-means. In the first step, samples are drawn randomly from the dataset, to form a mini-batch. These are then assigned to the nearest centroid. In the second step, the centroids are updated. In contrast to k-means, this is done on a per-sample basis. For each sample in the mini-batch, the assigned centroid is updated by taking the streaming average of the sample and all previous samples assigned to that centroid. This has the effect of decreasing the rate of change for a centroid over time. These steps are performed until convergence or a predetermined number of iterations is reached. MiniBatchKMeans converges faster than KMeans , but the quality of the results is reduced. In practice this difference in quality can be quite small, as shown in the example and cited reference References b 10/19/26, 11:48 AM 2.3. Clustering — scikit-learn 1.9.1 documentation https://scikit-learn.org/stable/modules/clustering.html 7/39"
+        }
+      ],
+      "attempts": 1,
+      "retried": false,
+      "ollama_wall_s": 21.062185800001316,
+      "ollama_prompt_s": 5.505735,
+      "ollama_generation_s": 15.265608,
+      "raw_replies": [
+        "K-means forms clusters by calculating the mean of the points in each cluster to determine the cluster center. It does this repeatedly until the points are in the right cluster or the change in the position of the cluster centers is less than a threshold. On the other hand, Affinity Propagation does not explicitly calculate cluster centers. Instead, it identifies exemplars (points that are most representative of other samples) and uses these exemplars to describe the dataset. The number of clusters is determined based on the data provided, and it sends messages between pairs of samples to decide which sample should be the exemplar of the other. [Source 1]"
+      ],
+      "summary": null,
+      "error": null,
+      "auto_first_pass": "answered (review faithfulness)"
+    },
+    {
+      "id": "q05",
+      "type": "specific_page",
+      "question": "Summarize page 10 of Clustering.pdf, focusing on how Spectral Clustering works and its limitations.",
+      "answerable": true,
+      "expected_pages": [
+        "Clustering.pdf p10"
+      ],
+      "routed_to": "retrieve+answer",
+      "retrieval_status": "ok",
+      "retrieval_s": 0.019961200003308477,
+      "answer_s": 20.253314300000056,
+      "total_s": 20.273491700001614,
+      "answer_status": "answered_with_warnings",
+      "answer": "Spectral Clustering works by first creating an affinity matrix between samples. This matrix shows how similar each sample is to the others. Then, it performs a low-dimension embedding of this affinity matrix, which means transforming the data into a simpler form. After that, it clusters the data points in this simplified space. Spectral Clustering uses KMeans for clustering in the low-dimensional space. It's very efficient when the affinity matrix is sparse and uses the amg solver for solving the eigenvalue problem. However, it requires the number of clusters to be specified in advance and is not recommended for many clusters. For two clusters, it solves a convex relaxation of the normalized cuts problem on the similarity graph. [Source 1: Clustering.pdf, page 10]",
+      "message": "",
+      "cited_pages": [
+        "Clustering.pdf p10"
+      ],
+      "cited_on_labeled_pages": 1,
+      "notes": [
+        "7 sentence(s) have no citation and should not be trusted as coming from your PDFs."
+      ],
+      "retrieved": [
+        {
+          "source": "Clustering.pdf",
+          "page": 10,
+          "similarity": 0.6277,
+          "sent_to_llm": true,
+          "text": " Examples A demo of the mean-shift clustering algorithm: Mean Shift clustering on a synthetic 2D datasets with 3 classes. 2.3.5. Spectral clustering SpectralClustering performs a low-dimension embedding of the affinity matrix between samples, followed by clustering, e.g., by KMeans, of the components of the eigenvectors in the low dimensional space. It is especially computationally efficient if the affinity matrix is sparse and the amg solver is used for the eigenvalue problem (Note, the amg solver requires that the pyamg module is installed.) The present version of SpectralClustering requires the number of clusters to be specified in advance. It works well for a small number of clusters, but is not advised for many clusters. For two clusters, SpectralClustering solves a convex relaxation of the normalized cuts problem on the similarity graph: cutting the graph in two so that the weight of the edges cut is small compared to the weights"
+        }
+      ],
+      "attempts": 1,
+      "retried": false,
+      "ollama_wall_s": 20.2529661999979,
+      "ollama_prompt_s": 2.840824,
+      "ollama_generation_s": 17.15859,
+      "raw_replies": [
+        "Spectral Clustering works by first creating an affinity matrix between samples. This matrix shows how similar each sample is to the others. Then, it performs a low-dimension embedding of this affinity matrix, which means transforming the data into a simpler form. After that, it clusters the data points in this simplified space. Spectral Clustering uses KMeans for clustering in the low-dimensional space. It's very efficient when the affinity matrix is sparse and uses the amg solver for solving the eigenvalue problem. However, it requires the number of clusters to be specified in advance and is not recommended for many clusters. For two clusters, it solves a convex relaxation of the normalized cuts problem on the similarity graph. [Source 1]"
+      ],
+      "summary": null,
+      "error": null,
+      "auto_first_pass": "answered (review faithfulness)"
+    },
+    {
+      "id": "q06",
+      "type": "absent",
+      "question": "How does a deep neural network use backpropagation to train its layers?",
+      "answerable": false,
+      "expected_pages": [],
+      "routed_to": "retrieve+answer",
+      "retrieval_status": "no_match",
+      "retrieval_s": 0.016167899997526547,
+      "answer_s": 7.200000254670158e-06,
+      "total_s": 0.016373200000089128,
+      "answer_status": "no_match",
+      "answer": null,
+      "message": "No passage in your PDFs was relevant enough to this question (best similarity 0.22, minimum 0.25). I won't answer from general knowledge when you're asking about your PDFs.",
+      "cited_pages": [],
+      "cited_on_labeled_pages": null,
+      "notes": [],
+      "retrieved": [],
+      "attempts": 0,
+      "retried": false,
+      "ollama_wall_s": null,
+      "ollama_prompt_s": null,
+      "ollama_generation_s": null,
+      "raw_replies": [],
+      "summary": null,
+      "error": null,
+      "auto_first_pass": "correct_abstention (no_match)"
+    },
+    {
+      "id": "q07",
+      "type": "ambiguous",
+      "question": "How does it work?",
+      "answerable": false,
+      "expected_pages": [],
+      "routed_to": "retrieve+answer",
+      "retrieval_status": "no_match",
+      "retrieval_s": 0.014477599997917423,
+      "answer_s": 2.5000008463393897e-06,
+      "total_s": 0.01472009999997681,
+      "answer_status": "no_match",
+      "answer": null,
+      "message": "No passage in your PDFs was relevant enough to this question (best similarity 0.20, minimum 0.25). I won't answer from general knowledge when you're asking about your PDFs.",
+      "cited_pages": [],
+      "cited_on_labeled_pages": null,
+      "notes": [],
+      "retrieved": [],
+      "attempts": 0,
+      "retried": false,
+      "ollama_wall_s": null,
+      "ollama_prompt_s": null,
+      "ollama_generation_s": null,
+      "raw_replies": [],
+      "summary": null,
+      "error": null,
+      "auto_first_pass": "correct_abstention (no_match)"
+    },
+    {
+      "id": "q08",
+      "type": "irrelevant_risk",
+      "question": "How should I prune a mango tree to improve fruit production?",
+      "answerable": false,
+      "expected_pages": [],
+      "routed_to": "retrieve+answer",
+      "retrieval_status": "weak",
+      "retrieval_s": 0.015456299999641487,
+      "answer_s": 4.099998477613553e-06,
+      "total_s": 0.015724900000350317,
+      "answer_status": "weak",
+      "answer": null,
+      "message": "The closest passages are only weakly related (best similarity 0.32), so I don't trust them enough to answer. Try rephrasing, or name the PDF.",
+      "cited_pages": [],
+      "cited_on_labeled_pages": null,
+      "notes": [],
+      "retrieved": [
+        {
+          "source": "Decision Trees.pdf",
+          "page": 14,
+          "similarity": 0.3228,
+          "sent_to_llm": false,
+          "text": "tree: By default when predicting, the samples with missing values are classified with the class used in the split found during training. If no missing values are seen during training for a given feature, then during prediction missing values are mapped to the child with the most samples. 1.10.9. Minimal Cost-Complexity Pruning Minimal cost-complexity pruning is an algorithm used to prune a tree to avoid over-fitting, described in Chapter 3 of [BRE]. This algorithm is parameterized by known as the complexity parameter. The complexity parameter is used to define the cost-complexity measure, of a given tree : where is the number of terminal nodes in and is traditionally defined as the total misclassification rate of the terminal nodes. Alternatively, scikit-learn uses the total sample weighted impurity of the terminal nodes for . As shown above, the impurity of a node depends on the criterion. Minimal cost-complexity pruning finds the subtree"
+        },
+        {
+          "source": "Decision Trees.pdf",
+          "page": 9,
+          "similarity": 0.3105,
+          "sent_to_llm": false,
+          "text": "that each leaf has a minimum size, avoiding low-variance, over-fit leaf nodes in regression problems. For classification with few classes, min_samples_leaf=1 is often the best choice. Note that min_samples_split considers samples directly and independent of sample_weight , if provided (e.g. a node with m weighted samples is still treated as having exactly m samples). Consider min_weight_fraction_leaf or min_impurity_decrease if accounting for sample weights is required at splits. Balance your dataset before training to prevent the tree from being biased toward the classes that are dominant. Class balancing can be done by sampling an equal number of samples from each class, or preferably by normalizing the sum of the sample weights ( sample_weight ) for each class to the same value. Also note that weight-based pre-pruning criteria, such as min_weight_fraction_leaf , will then be less biased toward dominant classes than criteria that are not aware of the sample weights, like min_samples_leaf"
+        },
+        {
+          "source": "Decision Trees.pdf",
+          "page": 10,
+          "similarity": 0.2981,
+          "sent_to_llm": false,
+          "text": "tree recursively partitions the feature space such that the samples with the same labels or similar target values are grouped together. Let the data at node be represented by with samples. For each candidate split consisting of a feature and threshold , partition the data into and subsets The quality of a candidate split of node is then computed using an impurity function or loss function , the choice of which depends on the task being solved (classification or regression) Select the parameters that minimises the impurity Various decision tree algorithms xi ∈Rn y ∈Rl m Qm nm θ = (j, tm) j tm Qleft m (θ) Qright m (θ) Qleft m (θ) = {(x, y)|xj ≤tm} Qright m (θ) = Qm ∖Qleft m (θ) m H() G(Qm, θ) = nleft m nm H(Qleft m (θ)) + nright m nm H(Qright m (θ)) 10/19/26, 11:46 AM 1.10. Decision Trees —"
+        }
+      ],
+      "attempts": 0,
+      "retried": false,
+      "ollama_wall_s": null,
+      "ollama_prompt_s": null,
+      "ollama_generation_s": null,
+      "raw_replies": [],
+      "summary": null,
+      "error": null,
+      "auto_first_pass": "correct_abstention (weak)"
+    },
+    {
+      "id": "q09",
+      "type": "multi_passage",
+      "question": "How do K-means clustering and decision trees differ in their purpose and how they learn from data?",
+      "answerable": true,
+      "expected_pages": [
+        "Clustering.pdf p5",
+        "Decision Trees.pdf p1"
+      ],
+      "routed_to": "retrieve+answer",
+      "retrieval_status": "ok",
+      "retrieval_s": 0.02003590000094846,
+      "answer_s": 24.189596600001096,
+      "total_s": 24.209946899998613,
+      "answer_status": "answered_with_warnings",
+      "answer": "K-means clustering and decision trees differ in their purpose and how they learn from data. K-means clustering aims to partition the data into a specified number of clusters, where each cluster is represented by the mean of the samples in the cluster. It tries to minimize the within-cluster sum-of-squares, which is a measure of the variance within each cluster. On the other hand, decision trees aim to create a model that predicts the value of a target variable by learning simple decision rules from the data features. Decision trees can be seen as a piecewise constant approximation, and they learn from data to approximate a sine curve with if-then-else decision rules. [Source 1: Clustering.pdf, page 4] [Source 2: Decision Trees.pdf, page 1]",
+      "message": "",
+      "cited_pages": [
+        "Clustering.pdf p4",
+        "Decision Trees.pdf p1"
+      ],
+      "cited_on_labeled_pages": 1,
+      "notes": [
+        "4 sentence(s) have no citation and should not be trusted as coming from your PDFs."
+      ],
+      "retrieved": [
+        {
+          "source": "Clustering.pdf",
+          "page": 4,
+          "similarity": 0.61,
+          "sent_to_llm": true,
+          "text": " mixture model with equal covariance per component. Transductive clustering methods (in contrast to inductive clustering methods) are not designed to be applied to new, unseen data. Examples Inductive Clustering: An example of an inductive clustering model for handling new data. 2.3.2. K-means The KMeans algorithm clusters data by trying to separate samples in n groups of equal variance, minimizing a criterion known as the inertia or within-cluster sum-of-squares (see below). This algorithm requires the number of clusters to be specified. It scales well to large numbers of samples and has been used across a large range of application areas in many different fields. The k-means algorithm divides a set of samples into disjoint clusters , each described by the mean of the samples in the cluster. The means are commonly called the cluster “centroids”; note that they are not, in general, points from , although they live in the"
+        },
+        {
+          "source": "Decision Trees.pdf",
+          "page": 1,
+          "similarity": 0.5379,
+          "sent_to_llm": true,
+          "text": " 1.10. Decision Trees Decision Trees (DTs) are a non-parametric supervised learning method used for classification and regression. The goal is to create a model that predicts the value of a target variable by learning simple decision rules inferred from the data features. A tree can be seen as a piecewise constant approximation. For instance, in the example below, decision trees learn from data to approximate a sine curve with a set of if-then-else decision rules. The deeper the tree, the more complex the decision rules and the fitter the model. Some advantages of decision trees are: Simple to understand and to interpret. Trees can be visualized. Requires little data preparation. Other techniques often require data normalization, dummy variables need to be created and blank values to be removed. Some tree and algorithm combinations support missing values. The cost of using the tree (i.e., predicting data) is logarithmic in the"
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 5,
+          "similarity": 0.57,
+          "sent_to_llm": true,
+          "text": " For more detailed descriptions of the issues shown above and how to address them, refer to the examples Demonstration of k-means assumptions and Selecting the number of clusters with silhouette analysis on KMeans clustering. K-means is often referred to as Lloyd’s algorithm. In basic terms, the algorithm has three steps. The first step chooses the initial centroids, with the most basic method being to choose samples from the dataset . After initialization, K-means consists of looping between the two other steps. The first step assigns each sample to its nearest centroid. The second step creates new centroids by taking the mean value of all of the samples assigned to each previous centroid. The difference between the old and the new centroids are computed and the algorithm repeats these last two steps until this value is less than a threshold. In other words, it repeats until the centroids do not"
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 8,
+          "similarity": 0.5688,
+          "sent_to_llm": true,
+          "text": " Examples Comparison of the K-Means and MiniBatchKMeans clustering algorithms: Comparison of KMeans and MiniBatchKMeans Clustering text documents using k-means: Document clustering using KMeans and MiniBatchKMeans based on sparse data Online learning of a dictionary of parts of faces 2.3.3. Affinity Propagation AffinityPropagation creates clusters by sending messages between pairs of samples until convergence. A dataset is then described using a small number of exemplars, which are identified as those most representative of other samples. The messages sent between pairs represent the suitability for one sample to be the exemplar of the other, which is updated in response to the values from other pairs. This updating happens iteratively until convergence, at which point the final exemplars are chosen, and hence the final clustering is given. Affinity Propagation can be interesting as it chooses the number of clusters based on the data provided. For this purpose, the two important parameters are"
+        }
+      ],
+      "attempts": 1,
+      "retried": false,
+      "ollama_wall_s": 24.189067299997987,
+      "ollama_prompt_s": 7.047894,
+      "ollama_generation_s": 16.967787,
+      "raw_replies": [
+        "K-means clustering and decision trees differ in their purpose and how they learn from data. K-means clustering aims to partition the data into a specified number of clusters, where each cluster is represented by the mean of the samples in the cluster. It tries to minimize the within-cluster sum-of-squares, which is a measure of the variance within each cluster. On the other hand, decision trees aim to create a model that predicts the value of a target variable by learning simple decision rules from the data features. Decision trees can be seen as a piecewise constant approximation, and they learn from data to approximate a sine curve with if-then-else decision rules. [Source 1] [Source 2]"
+      ],
+      "summary": null,
+      "error": null,
+      "auto_first_pass": "answered (review faithfulness)"
+    },
+    {
+      "id": "q10",
+      "type": "comparison",
+      "question": "Compare Linear Regression and Decision Trees in how they make predictions.",
+      "answerable": true,
+      "expected_pages": [
+        "Decision Trees.pdf p1",
+        "Linear Models.pdf p1"
+      ],
+      "routed_to": "retrieve+answer",
+      "retrieval_status": "ok",
+      "retrieval_s": 0.013808799998514587,
+      "answer_s": 49.86951119999867,
+      "total_s": 49.88355450000017,
+      "answer_status": "citation_failed",
+      "answer": null,
+      "message": "I couldn't produce an answer with valid citations, so I'm not showing it as a verified answer. The closest passages are listed below; please check them directly or rephrase the question.",
+      "cited_pages": [],
+      "cited_on_labeled_pages": null,
+      "notes": [],
+      "retrieved": [
+        {
+          "source": "Decision Trees.pdf",
+          "page": 1,
+          "similarity": 0.6221,
+          "sent_to_llm": true,
+          "text": " 1.10. Decision Trees Decision Trees (DTs) are a non-parametric supervised learning method used for classification and regression. The goal is to create a model that predicts the value of a target variable by learning simple decision rules inferred from the data features. A tree can be seen as a piecewise constant approximation. For instance, in the example below, decision trees learn from data to approximate a sine curve with a set of if-then-else decision rules. The deeper the tree, the more complex the decision rules and the fitter the model. Some advantages of decision trees are: Simple to understand and to interpret. Trees can be visualized. Requires little data preparation. Other techniques often require data normalization, dummy variables need to be created and blank values to be removed. Some tree and algorithm combinations support missing values. The cost of using the tree (i.e., predicting data) is logarithmic in the"
+        },
+        {
+          "source": "Linear Models.pdf",
+          "page": 1,
+          "similarity": 0.3985,
+          "sent_to_llm": true,
+          "text": " 1.1. Linear Models The following are a set of methods intended for regression in which the target value is expected to be a linear combination of the features. In mathematical notation, the predicted value can be written as: Across the module, we designate the vector as coef_ and as intercept_ . To perform classification with generalized linear models, see Logistic regression. 1.1.1. Ordinary Least Squares LinearRegression fits a linear model with coefficients to minimize the residual sum of squares between the observed targets in the dataset, and the targets predicted by the linear approximation. Mathematically it solves a problem of the form: LinearRegression takes in its fit method arguments X , y , sample_weight and stores the coefficients of the linear model in its coef_ and intercept_ attributes: ^y ^y(w, x) = w0 + w1x1+. . . +wpxp w = (w1, . . . , wp) w0 w ="
+        },
+        {
+          "source": "Support Vector Machines.pdf",
+          "page": 7,
+          "similarity": 0.3877,
+          "sent_to_llm": true,
+          "text": " 1.4.2. Regression The method of Support Vector Classification can be extended to solve regression problems. This method is called Support Vector Regression. The model produced by support vector classification (as described above) depends only on a subset of the training data, because the cost function for building the model does not care about training points that lie beyond the margin. Analogously, the model produced by Support Vector Regression depends only on a subset of the training data, because the cost function ignores samples whose prediction is close to their target. There are three different implementations of Support Vector Regression: SVR , NuSVR and LinearSVR . LinearSVR provides a faster implementation than SVR but only considers the linea kernel, while NuSVR implements a slightly different formulation than SVR and LinearSVR . Due to its implementation in liblinear LinearSVR also regularizes the intercept, if considered. This effect can however be reduced"
+        },
+        {
+          "source": "Decision Trees.pdf",
+          "page": 4,
+          "similarity": 0.5558,
+          "sent_to_llm": true,
+          "text": " Examples Plot the decision surface of decision trees trained on the iris dataset Understanding the decision tree structure 1.10.2. Regression Alternative ways to export trees 10/19/26, 11:46 AM 1.10. Decision Trees — scikit-learn 1.9.1 documentation https://scikit-learn.org/stable/modules/tree.html 4/15"
+        }
+      ],
+      "attempts": 2,
+      "retried": true,
+      "ollama_wall_s": 49.86899059999996,
+      "ollama_prompt_s": 11.176712,
+      "ollama_generation_s": 38.221463,
+      "raw_replies": [
+        "Linear Regression makes predictions by fitting a linear model that minimizes the residual sum of squares between the observed targets in the dataset and the targets predicted by the linear approximation. It does this by adjusting the coefficients of the linear model to find the best fit. The coefficients are stored in the attributes coef_ and intercept_ of the LinearRegression model.\n\nDecision Trees, on the other hand, learn simple decision rules from the data features. They create a tree-like model where each internal node represents a decision based on a feature, and each leaf node represents a prediction. The model predicts the value of the target variable by following the decision rules derived from the data. The complexity of the decision rules increases with the depth of the tree, making the model more complex and better fitting the data.",
+        "Linear Regression makes predictions by fitting a linear model with coefficients to minimize the residual sum of squares between the observed targets in the dataset and the targets predicted by the linear approximation. It does this by solving a problem of the form: ^y = w0 + w1x1 + ... + wpxp where w = (w1, ..., wp) are the coefficients of the linear model stored in the attributes coef_ and intercept_.\n\nDecision Trees, on the other hand, learn simple decision rules from the data features. They approximate the target value using if-then-else decision rules. For example, in the example below, decision trees learn from data to approximate a sine curve with a set of if-then-else decision rules. The deeper the tree, the more complex the decision rules and the fitter the model."
+      ],
+      "summary": null,
+      "error": null,
+      "auto_first_pass": "declined_or_failed (citation_failed)"
+    },
+    {
+      "id": "q11",
+      "type": "direct",
+      "question": "What problem can multicollinearity cause in Ordinary Least Squares regression?",
+      "answerable": true,
+      "expected_pages": [
+        "Linear Models.pdf p2"
+      ],
+      "routed_to": "retrieve+answer",
+      "retrieval_status": "ok",
+      "retrieval_s": 0.01972590000150376,
+      "answer_s": 8.460617900000216,
+      "total_s": 8.480599500002427,
+      "answer_status": "ok",
+      "answer": "When features are correlated and some columns of the design matrix have an approximately linear dependence, the design matrix becomes close to singular and as a result, the least-squares estimate becomes highly sensitive to random errors in the observed target, producing a large variance. [Source 1: Linear Models.pdf, page 2]",
+      "message": "",
+      "cited_pages": [
+        "Linear Models.pdf p2"
+      ],
+      "cited_on_labeled_pages": 1,
+      "notes": [],
+      "retrieved": [
+        {
+          "source": "Linear Models.pdf",
+          "page": 2,
+          "similarity": 0.6729,
+          "sent_to_llm": true,
+          "text": " The coefficient estimates for Ordinary Least Squares rely on the independence of the features. When features are correlated and some columns of the design matrix have an approximately linear dependence, the design matrix becomes close to singular and as a result, the least-squares estimate becomes highly sensitive to random errors in the observed target, producing a large variance. This situation of multicollinearity can arise, for example, when data are collected withou an experimental design. Examples Ordinary Least Squares and Ridge Regression 1.1.1.1. Non-Negative Least Squares It is possible to constrain all the coefficients to be non-negative, which may be useful when they represent some physical or naturally non-negative quantities (e.g., frequency counts or prices of goods). LinearRegression accepts a boolean positive parameter: when set to True Non- Negative Least Squares are then applied. Examples Non-negative least squares 1.1.1.2. Ordinary Least Squares Complexity The least squares solution is computed using"
+        }
+      ],
+      "attempts": 1,
+      "retried": false,
+      "ollama_wall_s": 8.460099299998546,
+      "ollama_prompt_s": 1.782698,
+      "ollama_generation_s": 6.468831,
+      "raw_replies": [
+        "When features are correlated and some columns of the design matrix have an approximately linear dependence, the design matrix becomes close to singular and as a result, the least-squares estimate becomes highly sensitive to random errors in the observed target, producing a large variance. [Source 1]"
+      ],
+      "summary": null,
+      "error": null,
+      "auto_first_pass": "answered (review faithfulness)"
+    },
+    {
+      "id": "q12",
+      "type": "specific_page",
+      "question": "Summarize page 1 of Support Vector Machines.pdf, including the main uses, advantages, and disadvantages of SVMs.",
+      "answerable": true,
+      "expected_pages": [
+        "Support Vector Machines.pdf p1"
+      ],
+      "routed_to": "retrieve+answer",
+      "retrieval_status": "ok",
+      "retrieval_s": 0.028145200001745252,
+      "answer_s": 18.43864990000293,
+      "total_s": 18.467057299996668,
+      "answer_status": "answered_with_warnings",
+      "answer": "Support Vector Machines (SVMs) are used for classification, regression, and outliers detection. They have several advantages: they are effective in high-dimensional spaces, work well even when the number of dimensions is greater than the number of samples, use only a subset of training points (support vectors) in their decision function, and are versatile with different kernel functions. SVMs also have some disadvantages: they can overfit if the number of features is much greater than the number of samples, and choosing the right kernel function and setting the regularization term is important. Additionally, SVMs do not directly provide probability estimates, which need to be calculated using a five-fold cross-validation method. [Source 1: Support Vector Machines.pdf, page 1]",
+      "message": "",
+      "cited_pages": [
+        "Support Vector Machines.pdf p1"
+      ],
+      "cited_on_labeled_pages": 1,
+      "notes": [
+        "3 sentence(s) have no citation and should not be trusted as coming from your PDFs."
+      ],
+      "retrieved": [
+        {
+          "source": "Support Vector Machines.pdf",
+          "page": 1,
+          "similarity": 0.7623,
+          "sent_to_llm": true,
+          "text": " 1.4. Support Vector Machines Support vector machines (SVMs) are a set of supervised learning methods used for classification, regression and outliers detection. The advantages of support vector machines are: Effective in high dimensional spaces. Still effective in cases where number of dimensions is greater than the number of samples. Uses a subset of training points in the decision function (called support vectors), so it is also memory efficient. Versatile: different Kernel functions can be specified for the decision function. Common kernels are provided, but it is also possible to specify custom kernels. The disadvantages of support vector machines include: If the number of features is much greater than the number of samples, avoid over-fitting in choosing Kernel functions and regularization term is crucial. SVMs do not directly provide probability estimates, these are calculated using an expensive five-fold cross-validation (see Scores and probabilities, below). The support vector machines in scikit-learn"
+        }
+      ],
+      "attempts": 1,
+      "retried": false,
+      "ollama_wall_s": 18.438318900000013,
+      "ollama_prompt_s": 1.770824,
+      "ollama_generation_s": 16.532533,
+      "raw_replies": [
+        "Support Vector Machines (SVMs) are used for classification, regression, and outliers detection. They have several advantages: they are effective in high-dimensional spaces, work well even when the number of dimensions is greater than the number of samples, use only a subset of training points (support vectors) in their decision function, and are versatile with different kernel functions. SVMs also have some disadvantages: they can overfit if the number of features is much greater than the number of samples, and choosing the right kernel function and setting the regularization term is important. Additionally, SVMs do not directly provide probability estimates, which need to be calculated using a five-fold cross-validation method. [Source 1]"
+      ],
+      "summary": null,
+      "error": null,
+      "auto_first_pass": "answered (review faithfulness)"
+    },
+    {
+      "id": "q13",
+      "type": "absent",
+      "question": "How does a Random Forest combine predictions from multiple decision trees?",
+      "answerable": false,
+      "expected_pages": [],
+      "routed_to": "retrieve+answer",
+      "retrieval_status": "ok",
+      "retrieval_s": 0.012021899998217123,
+      "answer_s": 5.585356100000354,
+      "total_s": 5.597637799997756,
+      "answer_status": "insufficient_evidence",
+      "answer": null,
+      "message": "The retrieved PDF passages don't contain enough information to answer this. The right PDFs/pages were searched, but the answer isn't in them, so I won't answer from general knowledge.",
+      "cited_pages": [],
+      "cited_on_labeled_pages": null,
+      "notes": [],
+      "retrieved": [
+        {
+          "source": "Decision Trees.pdf",
+          "page": 6,
+          "similarity": 0.5837,
+          "sent_to_llm": true,
+          "text": " models to independently predict each one of the n outputs. However, because it is likely that the output values related to the same input are themselves correlated, an often better way is to build a single model capable of predicting simultaneously all n outputs. First, it requires lower training time since only a single estimator is built. Second, the generalization accuracy of the resulting estimator may often be increased. With regard to decision trees, this strategy can readily be used to support multi-output problems. This requires the following changes: Store n output values in leaves, instead of 1; Use splitting criteria that compute the average reduction across all n outputs. This module offers support for multi-output problems by implementing this strategy in both DecisionTreeClassifier and DecisionTreeRegressor . If a decision tree is fit on an output array Y of shape (n_samples, n_outputs) then the resulting estimator will: Output n_output"
+        },
+        {
+          "source": "Decision Trees.pdf",
+          "page": 2,
+          "similarity": 0.5059,
+          "sent_to_llm": true,
+          "text": "number of samples required at a leaf node or setting the maximum depth of the tree are necessary to avoid this problem. Decision trees can be unstable because small variations in the data might result in a completely different tree being generated. This problem is mitigated by using decision trees within an ensemble. Predictions of decision trees are neither smooth nor continuous, but piecewise constant approximations as seen in the above figure. Therefore, they are not good at extrapolation. The problem of learning an optimal decision tree is known to be NP-complete under several aspects of optimality and even for simple concepts. Consequently, practical decision-tree learning algorithms are based on heuristic algorithms such as the greedy algorithm where locally optimal decisions are made at each node. Such algorithms cannot guarantee to return the globally optimal decision tree. This can be mitigated by training multiple trees in an ensemble learner, where"
+        },
+        {
+          "source": "Decision Trees.pdf",
+          "page": 13,
+          "similarity": 0.4582,
+          "sent_to_llm": true,
+          "text": " 1.10.8. Missing Values Support DecisionTreeClassifier , DecisionTreeRegressor have built-in support for missing values using splitter='best' , where the splits are determined in a greedy fashion. ExtraTreeClassifier , and ExtraTreeRegressor have built-in support for missing values for splitter='random' , where the splits are determined randomly. For more details on how the splitter differs on non-missing values, see the Forest section. First we will describe how DecisionTreeClassifier , DecisionTreeRegressor handle missing- values in the data. For each potential threshold on the non-missing data, the splitter will evaluate the split with all the missing values going to the left node or the right node. Decisions are made as follows: By default when predicting, the samples with missing values are classified with the class used in the split found during training: If the criterion evaluation is the same for both nodes, then the tie for missing value at predic time is broken by"
+        }
+      ],
+      "attempts": 1,
+      "retried": false,
+      "ollama_wall_s": 5.585309400001279,
+      "ollama_prompt_s": 4.702927,
+      "ollama_generation_s": 0.721698,
+      "raw_replies": [
+        "INSUFFICIENT_EVIDENCE"
+      ],
+      "summary": null,
+      "error": null,
+      "auto_first_pass": "correct_abstention (insufficient_evidence)"
+    },
+    {
+      "id": "q14",
+      "type": "ambiguous",
+      "question": "Which one is better?",
+      "answerable": false,
+      "expected_pages": [],
+      "routed_to": "retrieve+answer",
+      "retrieval_status": "no_match",
+      "retrieval_s": 0.022981000001891516,
+      "answer_s": 6.900001608300954e-06,
+      "total_s": 0.02326829999947222,
+      "answer_status": "no_match",
+      "answer": null,
+      "message": "No passage in your PDFs was relevant enough to this question (best similarity 0.23, minimum 0.25). I won't answer from general knowledge when you're asking about your PDFs.",
+      "cited_pages": [],
+      "cited_on_labeled_pages": null,
+      "notes": [],
+      "retrieved": [],
+      "attempts": 0,
+      "retried": false,
+      "ollama_wall_s": null,
+      "ollama_prompt_s": null,
+      "ollama_generation_s": null,
+      "raw_replies": [],
+      "summary": null,
+      "error": null,
+      "auto_first_pass": "correct_abstention (no_match)"
+    },
+    {
+      "id": "q15",
+      "type": "irrelevant_risk",
+      "question": "How do I make a decision tree for planning a birthday party?",
+      "answerable": false,
+      "expected_pages": [],
+      "routed_to": "retrieve+answer",
+      "retrieval_status": "ok",
+      "retrieval_s": 0.031389300002047094,
+      "answer_s": 5.547642200002883,
+      "total_s": 5.5794652000004135,
+      "answer_status": "insufficient_evidence",
+      "answer": null,
+      "message": "The retrieved PDF passages don't contain enough information to answer this. The right PDFs/pages were searched, but the answer isn't in them, so I won't answer from general knowledge.",
+      "cited_pages": [],
+      "cited_on_labeled_pages": null,
+      "notes": [],
+      "retrieved": [
+        {
+          "source": "Decision Trees.pdf",
+          "page": 3,
+          "similarity": 0.4777,
+          "sent_to_llm": true,
+          "text": " integer values, shape (n_samples,) , holding the class labels for the training samples: After being fitted, the model can then be used to predict the class of samples: In case that there are multiple classes with the same and highest probability, the classifier will predict the class with the lowest index amongst those classes. As an alternative to outputting a specific class, the probability of each class can be predicted, which is the fraction of training samples of the class in a leaf: DecisionTreeClassifier is capable of both binary (where the labels are [-1, 1]) classification and multiclass (where the labels are [0, …, K-1]) classification. Using the Iris dataset, we can construct a tree as follows: Once trained, you can plot the tree with the plot_tree function: >>> from sklearn import tree >>> X = [[0, 0], [1, 1]] >>> Y = [0, 1] >>> clf = tree.DecisionTreeClassifier()"
+        },
+        {
+          "source": "Decision Trees.pdf",
+          "page": 1,
+          "similarity": 0.4125,
+          "sent_to_llm": true,
+          "text": " 1.10. Decision Trees Decision Trees (DTs) are a non-parametric supervised learning method used for classification and regression. The goal is to create a model that predicts the value of a target variable by learning simple decision rules inferred from the data features. A tree can be seen as a piecewise constant approximation. For instance, in the example below, decision trees learn from data to approximate a sine curve with a set of if-then-else decision rules. The deeper the tree, the more complex the decision rules and the fitter the model. Some advantages of decision trees are: Simple to understand and to interpret. Trees can be visualized. Requires little data preparation. Other techniques often require data normalization, dummy variables need to be created and blank values to be removed. Some tree and algorithm combinations support missing values. The cost of using the tree (i.e., predicting data) is logarithmic in the"
+        },
+        {
+          "source": "Decision Trees.pdf",
+          "page": 2,
+          "similarity": 0.3992,
+          "sent_to_llm": true,
+          "text": "number of samples required at a leaf node or setting the maximum depth of the tree are necessary to avoid this problem. Decision trees can be unstable because small variations in the data might result in a completely different tree being generated. This problem is mitigated by using decision trees within an ensemble. Predictions of decision trees are neither smooth nor continuous, but piecewise constant approximations as seen in the above figure. Therefore, they are not good at extrapolation. The problem of learning an optimal decision tree is known to be NP-complete under several aspects of optimality and even for simple concepts. Consequently, practical decision-tree learning algorithms are based on heuristic algorithms such as the greedy algorithm where locally optimal decisions are made at each node. Such algorithms cannot guarantee to return the globally optimal decision tree. This can be mitigated by training multiple trees in an ensemble learner, where"
+        }
+      ],
+      "attempts": 1,
+      "retried": false,
+      "ollama_wall_s": 5.547553600001265,
+      "ollama_prompt_s": 4.661481,
+      "ollama_generation_s": 0.706559,
+      "raw_replies": [
+        "INSUFFICIENT_EVIDENCE"
+      ],
+      "summary": null,
+      "error": null,
+      "auto_first_pass": "correct_abstention (insufficient_evidence)"
+    }
+  ]
+}

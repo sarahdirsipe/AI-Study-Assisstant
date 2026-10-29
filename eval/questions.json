@@ -1,0 +1,178 @@
+[
+  {
+    "id": "q01",
+    "type": "direct",
+    "question": "What are the main steps of the K-means algorithm?",
+    "answerable": true,
+    "relevant": [
+      {
+        "source": "Clustering.pdf",
+        "pages": [5]
+      }
+    ],
+    "notes": "The page explains centroid initialization, sample assignment, and centroid updates."
+  },
+  {
+    "id": "q02",
+    "type": "direct",
+    "question": "How does K-means++ initialization help the K-means algorithm?",
+    "answerable": true,
+    "relevant": [
+      {
+        "source": "Clustering.pdf",
+        "pages": [6]
+      }
+    ],
+    "notes": "The page explains how K-means++ generally selects centroids that are distant from each other."
+  },
+  {
+    "id": "q03",
+    "type": "comparison",
+    "question": "Compare standard K-means and Mini-Batch K-means in terms of their steps, speed, and result quality.",
+    "answerable": true,
+    "relevant": [
+      {
+        "source": "Clustering.pdf",
+        "pages": [5, 7]
+      }
+    ],
+    "notes": "Page 5 explains standard K-means, while page 7 explains Mini-Batch K-means and its speed and quality trade-off."
+  },
+  {
+    "id": "q04",
+    "type": "multi_passage",
+    "question": "How do K-means and Affinity Propagation differ in how they form clusters and determine cluster centers?",
+    "answerable": true,
+    "relevant": [
+      {
+        "source": "Clustering.pdf",
+        "pages": [5, 8]
+      }
+    ],
+    "notes": "Page 5 explains how K-means assigns samples to centroids and updates them. Page 8 explains how Affinity Propagation selects representative samples called exemplars."
+  },
+{
+  "id": "q05",
+  "type": "specific_page",
+  "question": "Summarize page 10 of Clustering.pdf, focusing on how Spectral Clustering works and its limitations.",
+  "answerable": true,
+  "relevant": [
+    {
+      "source": "Clustering.pdf",
+      "pages": [10]
+    }
+  ],
+  "notes": "Page 10 describes the affinity matrix, low-dimensional embedding, and the limitations on the number of clusters."
+}
+,
+{
+  "id": "q06",
+  "type": "absent",
+  "question": "How does a deep neural network use backpropagation to train its layers?",
+  "answerable": false,
+  "relevant": [],
+  "notes": "Keyword searches for 'neural networks' and 'deep learning' returned no matches. Verify related terms before finalizing absence."
+}
+,
+{
+  "id": "q07",
+  "type": "ambiguous",
+  "question": "How does it work?",
+  "answerable": false,
+  "relevant": [],
+  "notes": "The question does not identify an algorithm or topic, so the intended answer cannot be determined without clarification."
+}
+,
+{
+  "id": "q08",
+  "type": "irrelevant_risk",
+  "question": "How should I prune a mango tree to improve fruit production?",
+  "answerable": false,
+  "relevant": [],
+  "notes": "The question is about gardening, not machine learning. The word 'tree' may cause irrelevant retrieval from Decision Trees.pdf."
+},
+{
+  "id": "q09",
+  "type": "multi_passage",
+  "question": "How do K-means clustering and decision trees differ in their purpose and how they learn from data?",
+  "answerable": true,
+  "relevant": [
+    {
+      "source": "Clustering.pdf",
+      "pages": [5]
+    },
+    {
+      "source": "Decision Trees.pdf",
+      "pages": [1]
+    }
+  ],
+  "notes": "Clustering page 5 explains how K-means groups samples using centroids. Decision Trees page 1 explains supervised learning using decision rules."
+},
+{
+  "id": "q10",
+  "type": "comparison",
+  "question": "Compare Linear Regression and Decision Trees in how they make predictions.",
+  "answerable": true,
+  "relevant": [
+    {
+      "source": "Linear Models.pdf",
+      "pages": [1]
+    },
+    {
+      "source": "Decision Trees.pdf",
+      "pages": [1]
+    }
+  ],
+  "notes": "Linear Models page 1 explains predictions using a linear combination of features. Decision Trees page 1 explains predictions using learned decision rules."
+},
+{
+  "id": "q11",
+  "type": "direct",
+  "question": "What problem can multicollinearity cause in Ordinary Least Squares regression?",
+  "answerable": true,
+  "relevant": [
+    {
+      "source": "Linear Models.pdf",
+      "pages": [2]
+    }
+  ],
+  "notes": "Page 2 explains that correlated features can make least-squares estimates highly sensitive to errors, resulting in high variance."
+},
+{
+  "id": "q12",
+  "type": "specific_page",
+  "question": "Summarize page 1 of Support Vector Machines.pdf, including the main uses, advantages, and disadvantages of SVMs.",
+  "answerable": true,
+  "relevant": [
+    {
+      "source": "Support Vector Machines.pdf",
+      "pages": [1]
+    }
+  ],
+  "notes": "Page 1 describes SVM applications, strengths in high-dimensional spaces, and limitations involving overfitting and probability estimates."
+},
+{
+  "id": "q13",
+  "type": "absent",
+  "question": "How does a Random Forest combine predictions from multiple decision trees?",
+  "answerable": false,
+  "relevant": [],
+  "notes": "Searches found no direct coverage of Random Forests or how they combine predictions. Decision Trees.pdf page 2 mentions ensemble learners generally."
+},
+{
+  "id": "q14",
+  "type": "ambiguous",
+  "question": "Which one is better?",
+  "answerable": false,
+  "relevant": [],
+  "notes": "The question does not specify which algorithms or methods should be compared."
+},
+{
+  "id": "q15",
+  "type": "irrelevant_risk",
+  "question": "How do I make a decision tree for planning a birthday party?",
+  "answerable": false,
+  "relevant": [],
+  "notes": "The question concerns event planning rather than machine-learning decision trees, so matching terminology could retrieve irrelevant content."
+}
+]

@@ -1,0 +1,624 @@
+{
+  "settings": {
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "chunk_size": 150,
+    "chunk_overlap": 30,
+    "top_k": 3,
+    "compare_top_k": 4,
+    "min_similarity": 0.25,
+    "weak_similarity": 0.35,
+    "relative_cutoff": 0.75,
+    "max_chunks_per_page": 2,
+    "num_chunks": 221
+  },
+  "results": [
+    {
+      "id": "q01",
+      "type": "direct",
+      "question": "What are the main steps of the K-means algorithm?",
+      "answerable": true,
+      "status": "ok",
+      "scoped_by_filter": false,
+      "comparison_detected": false,
+      "retrieval_s": 0.02220610000222223,
+      "sent": [
+        {
+          "source": "Clustering.pdf",
+          "page": 5,
+          "similarity": 0.7755
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 4,
+          "similarity": 0.6866
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 5,
+          "similarity": 0.6771
+        }
+      ],
+      "ranking": {
+        "top1_score": 0.7755104303359985,
+        "top1_page": [
+          "Clustering.pdf",
+          5
+        ],
+        "best_relevant_score": 0.7755104303359985,
+        "first_relevant_rank": 1,
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "rr": 1.0
+      },
+      "recall": 1.0,
+      "precision": 0.6666666666666666,
+      "hit": true,
+      "source_coverage": 1.0,
+      "top1_source_ok": true,
+      "top1_page_ok": true,
+      "outcome": "hit"
+    },
+    {
+      "id": "q02",
+      "type": "direct",
+      "question": "How does K-means++ initialization help the K-means algorithm?",
+      "answerable": true,
+      "status": "ok",
+      "scoped_by_filter": false,
+      "comparison_detected": false,
+      "retrieval_s": 0.016482000002724817,
+      "sent": [
+        {
+          "source": "Clustering.pdf",
+          "page": 6,
+          "similarity": 0.7303
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 5,
+          "similarity": 0.729
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 5,
+          "similarity": 0.6794
+        }
+      ],
+      "ranking": {
+        "top1_score": 0.730310320854187,
+        "top1_page": [
+          "Clustering.pdf",
+          6
+        ],
+        "best_relevant_score": 0.730310320854187,
+        "first_relevant_rank": 1,
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "rr": 1.0
+      },
+      "recall": 1.0,
+      "precision": 0.3333333333333333,
+      "hit": true,
+      "source_coverage": 1.0,
+      "top1_source_ok": true,
+      "top1_page_ok": true,
+      "outcome": "hit"
+    },
+    {
+      "id": "q03",
+      "type": "comparison",
+      "question": "Compare standard K-means and Mini-Batch K-means in terms of their steps, speed, and result quality.",
+      "answerable": true,
+      "status": "ok",
+      "scoped_by_filter": false,
+      "comparison_detected": true,
+      "retrieval_s": 0.015287499998521525,
+      "sent": [
+        {
+          "source": "Clustering.pdf",
+          "page": 7,
+          "similarity": 0.7151
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 7,
+          "similarity": 0.6451
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 5,
+          "similarity": 0.5665
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 4,
+          "similarity": 0.5649
+        }
+      ],
+      "ranking": {
+        "top1_score": 0.7151177525520325,
+        "top1_page": [
+          "Clustering.pdf",
+          7
+        ],
+        "best_relevant_score": 0.7151177525520325,
+        "first_relevant_rank": 1,
+        "recall@1": 0.5,
+        "precision@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.6666666666666666,
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "rr": 1.0
+      },
+      "recall": 1.0,
+      "precision": 0.75,
+      "hit": true,
+      "source_coverage": 1.0,
+      "top1_source_ok": true,
+      "top1_page_ok": true,
+      "outcome": "hit"
+    },
+    {
+      "id": "q04",
+      "type": "multi_passage",
+      "question": "How do K-means and Affinity Propagation differ in how they form clusters and determine cluster centers?",
+      "answerable": true,
+      "status": "ok",
+      "scoped_by_filter": false,
+      "comparison_detected": true,
+      "retrieval_s": 0.022957199998927535,
+      "sent": [
+        {
+          "source": "Clustering.pdf",
+          "page": 8,
+          "similarity": 0.7473
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 5,
+          "similarity": 0.7081
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 6,
+          "similarity": 0.7058
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 5,
+          "similarity": 0.7019
+        }
+      ],
+      "ranking": {
+        "top1_score": 0.7472660541534424,
+        "top1_page": [
+          "Clustering.pdf",
+          8
+        ],
+        "best_relevant_score": 0.7472660541534424,
+        "first_relevant_rank": 1,
+        "recall@1": 0.5,
+        "precision@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.6666666666666666,
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "rr": 1.0
+      },
+      "recall": 1.0,
+      "precision": 0.75,
+      "hit": true,
+      "source_coverage": 1.0,
+      "top1_source_ok": true,
+      "top1_page_ok": true,
+      "outcome": "hit"
+    },
+    {
+      "id": "q05",
+      "type": "specific_page",
+      "question": "Summarize page 10 of Clustering.pdf, focusing on how Spectral Clustering works and its limitations.",
+      "answerable": true,
+      "status": "ok",
+      "scoped_by_filter": true,
+      "comparison_detected": false,
+      "retrieval_s": 0.01570730000094045,
+      "sent": [
+        {
+          "source": "Clustering.pdf",
+          "page": 10,
+          "similarity": 0.6277
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 10,
+          "similarity": 0.464
+        }
+      ],
+      "ranking": {
+        "top1_score": 0.6276851892471313,
+        "top1_page": [
+          "Clustering.pdf",
+          10
+        ],
+        "best_relevant_score": 0.6276851892471313,
+        "first_relevant_rank": 1,
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "rr": 1.0
+      },
+      "recall": 1.0,
+      "precision": 1.0,
+      "hit": true,
+      "source_coverage": 1.0,
+      "top1_source_ok": true,
+      "top1_page_ok": true,
+      "outcome": "hit"
+    },
+    {
+      "id": "q06",
+      "type": "absent",
+      "question": "How does a deep neural network use backpropagation to train its layers?",
+      "answerable": false,
+      "status": "no_match",
+      "scoped_by_filter": false,
+      "comparison_detected": false,
+      "retrieval_s": 0.01616230000217911,
+      "sent": [],
+      "ranking": {
+        "top1_score": 0.2225189507007599,
+        "top1_page": [
+          "Linear Models.pdf",
+          25
+        ],
+        "best_relevant_score": null,
+        "first_relevant_rank": null
+      },
+      "outcome": "rejected_at_retrieval"
+    },
+    {
+      "id": "q07",
+      "type": "ambiguous",
+      "question": "How does it work?",
+      "answerable": false,
+      "status": "no_match",
+      "scoped_by_filter": false,
+      "comparison_detected": false,
+      "retrieval_s": 0.011575000000448199,
+      "sent": [],
+      "ranking": {
+        "top1_score": 0.20277675986289978,
+        "top1_page": [
+          "Linear Models.pdf",
+          15
+        ],
+        "best_relevant_score": null,
+        "first_relevant_rank": null
+      },
+      "outcome": "rejected_at_retrieval"
+    },
+    {
+      "id": "q08",
+      "type": "irrelevant_risk",
+      "question": "How should I prune a mango tree to improve fruit production?",
+      "answerable": false,
+      "status": "weak",
+      "scoped_by_filter": false,
+      "comparison_detected": false,
+      "retrieval_s": 0.012722800001938595,
+      "sent": [],
+      "ranking": {
+        "top1_score": 0.3228256106376648,
+        "top1_page": [
+          "Decision Trees.pdf",
+          14
+        ],
+        "best_relevant_score": null,
+        "first_relevant_rank": null
+      },
+      "outcome": "rejected_at_retrieval"
+    },
+    {
+      "id": "q09",
+      "type": "multi_passage",
+      "question": "How do K-means clustering and decision trees differ in their purpose and how they learn from data?",
+      "answerable": true,
+      "status": "ok",
+      "scoped_by_filter": false,
+      "comparison_detected": true,
+      "retrieval_s": 0.01663630000257399,
+      "sent": [
+        {
+          "source": "Clustering.pdf",
+          "page": 4,
+          "similarity": 0.61
+        },
+        {
+          "source": "Decision Trees.pdf",
+          "page": 1,
+          "similarity": 0.5379
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 5,
+          "similarity": 0.57
+        },
+        {
+          "source": "Clustering.pdf",
+          "page": 8,
+          "similarity": 0.5688
+        }
+      ],
+      "ranking": {
+        "top1_score": 0.6099697351455688,
+        "top1_page": [
+          "Clustering.pdf",
+          4
+        ],
+        "best_relevant_score": 0.5700309872627258,
+        "first_relevant_rank": 2,
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "recall@3": 0.5,
+        "precision@3": 0.3333333333333333,
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "rr": 0.5
+      },
+      "recall": 1.0,
+      "precision": 0.5,
+      "hit": true,
+      "source_coverage": 1.0,
+      "top1_source_ok": true,
+      "top1_page_ok": false,
+      "outcome": "hit"
+    },
+    {
+      "id": "q10",
+      "type": "comparison",
+      "question": "Compare Linear Regression and Decision Trees in how they make predictions.",
+      "answerable": true,
+      "status": "ok",
+      "scoped_by_filter": false,
+      "comparison_detected": true,
+      "retrieval_s": 0.013655900002049748,
+      "sent": [
+        {
+          "source": "Decision Trees.pdf",
+          "page": 1,
+          "similarity": 0.6221
+        },
+        {
+          "source": "Linear Models.pdf",
+          "page": 1,
+          "similarity": 0.3985
+        },
+        {
+          "source": "Support Vector Machines.pdf",
+          "page": 7,
+          "similarity": 0.3877
+        },
+        {
+          "source": "Decision Trees.pdf",
+          "page": 4,
+          "similarity": 0.5558
+        }
+      ],
+      "ranking": {
+        "top1_score": 0.6221369504928589,
+        "top1_page": [
+          "Decision Trees.pdf",
+          1
+        ],
+        "best_relevant_score": 0.6221369504928589,
+        "first_relevant_rank": 1,
+        "recall@1": 0.5,
+        "precision@1": 1.0,
+        "recall@3": 0.5,
+        "precision@3": 0.3333333333333333,
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "rr": 1.0
+      },
+      "recall": 1.0,
+      "precision": 0.5,
+      "hit": true,
+      "source_coverage": 1.0,
+      "top1_source_ok": true,
+      "top1_page_ok": true,
+      "outcome": "hit"
+    },
+    {
+      "id": "q11",
+      "type": "direct",
+      "question": "What problem can multicollinearity cause in Ordinary Least Squares regression?",
+      "answerable": true,
+      "status": "ok",
+      "scoped_by_filter": false,
+      "comparison_detected": false,
+      "retrieval_s": 0.015071899997565197,
+      "sent": [
+        {
+          "source": "Linear Models.pdf",
+          "page": 2,
+          "similarity": 0.6729
+        }
+      ],
+      "ranking": {
+        "top1_score": 0.6728688478469849,
+        "top1_page": [
+          "Linear Models.pdf",
+          2
+        ],
+        "best_relevant_score": 0.6728688478469849,
+        "first_relevant_rank": 1,
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "rr": 1.0
+      },
+      "recall": 1.0,
+      "precision": 1.0,
+      "hit": true,
+      "source_coverage": 1.0,
+      "top1_source_ok": true,
+      "top1_page_ok": true,
+      "outcome": "hit"
+    },
+    {
+      "id": "q12",
+      "type": "specific_page",
+      "question": "Summarize page 1 of Support Vector Machines.pdf, including the main uses, advantages, and disadvantages of SVMs.",
+      "answerable": true,
+      "status": "ok",
+      "scoped_by_filter": true,
+      "comparison_detected": false,
+      "retrieval_s": 0.016501100002642488,
+      "sent": [
+        {
+          "source": "Support Vector Machines.pdf",
+          "page": 1,
+          "similarity": 0.7623
+        },
+        {
+          "source": "Support Vector Machines.pdf",
+          "page": 1,
+          "similarity": 0.5265
+        }
+      ],
+      "ranking": {
+        "top1_score": 0.7622954845428467,
+        "top1_page": [
+          "Support Vector Machines.pdf",
+          1
+        ],
+        "best_relevant_score": 0.7622954845428467,
+        "first_relevant_rank": 1,
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "rr": 1.0
+      },
+      "recall": 1.0,
+      "precision": 1.0,
+      "hit": true,
+      "source_coverage": 1.0,
+      "top1_source_ok": true,
+      "top1_page_ok": true,
+      "outcome": "hit"
+    },
+    {
+      "id": "q13",
+      "type": "absent",
+      "question": "How does a Random Forest combine predictions from multiple decision trees?",
+      "answerable": false,
+      "status": "ok",
+      "scoped_by_filter": false,
+      "comparison_detected": false,
+      "retrieval_s": 0.01272419999804697,
+      "sent": [
+        {
+          "source": "Decision Trees.pdf",
+          "page": 6,
+          "similarity": 0.5837
+        },
+        {
+          "source": "Decision Trees.pdf",
+          "page": 6,
+          "similarity": 0.5255
+        },
+        {
+          "source": "Decision Trees.pdf",
+          "page": 2,
+          "similarity": 0.5059
+        }
+      ],
+      "ranking": {
+        "top1_score": 0.583732008934021,
+        "top1_page": [
+          "Decision Trees.pdf",
+          6
+        ],
+        "best_relevant_score": null,
+        "first_relevant_rank": null
+      },
+      "outcome": "passed_to_llm"
+    },
+    {
+      "id": "q14",
+      "type": "ambiguous",
+      "question": "Which one is better?",
+      "answerable": false,
+      "status": "no_match",
+      "scoped_by_filter": false,
+      "comparison_detected": false,
+      "retrieval_s": 0.015132799999264535,
+      "sent": [],
+      "ranking": {
+        "top1_score": 0.22570528090000153,
+        "top1_page": [
+          "Decision Trees.pdf",
+          10
+        ],
+        "best_relevant_score": null,
+        "first_relevant_rank": null
+      },
+      "outcome": "rejected_at_retrieval"
+    },
+    {
+      "id": "q15",
+      "type": "irrelevant_risk",
+      "question": "How do I make a decision tree for planning a birthday party?",
+      "answerable": false,
+      "status": "ok",
+      "scoped_by_filter": false,
+      "comparison_detected": false,
+      "retrieval_s": 0.013041500002145767,
+      "sent": [
+        {
+          "source": "Decision Trees.pdf",
+          "page": 3,
+          "similarity": 0.4777
+        },
+        {
+          "source": "Decision Trees.pdf",
+          "page": 1,
+          "similarity": 0.4125
+        },
+        {
+          "source": "Decision Trees.pdf",
+          "page": 3,
+          "similarity": 0.4106
+        }
+      ],
+      "ranking": {
+        "top1_score": 0.47772926092147827,
+        "top1_page": [
+          "Decision Trees.pdf",
+          3
+        ],
+        "best_relevant_score": null,
+        "first_relevant_rank": null
+      },
+      "outcome": "passed_to_llm"
+    }
+  ]
+}

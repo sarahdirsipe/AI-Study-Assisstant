@@ -1,0 +1,135 @@
+ [{
+    "id": "q01",
+    "relevance": "high",
+    "faithfulness": "high",
+    "citation_correct": "partial",
+    "completeness": "high",
+    "abstention_ok": null,
+    "comments": "All steps are supported by Clustering.pdf page 5. However, individual steps lack citations, making the answer difficult to trace sentence by sentence."
+  },
+  {
+    "id": "q02",
+    "relevance": "high",
+    "faithfulness": "high",
+    "citation_correct": "high",
+    "completeness": "high",
+    "abstention_ok": null,
+    "comments": "All claims are supported by Clustering.pdf page 6. Every sentence has a correct citation, and no warnings were reported."
+  },
+  {
+    "id": "q03",
+    "relevance": "high",
+    "faithfulness": "high",
+    "citation_correct": "partial",
+    "completeness": "high",
+    "abstention_ok": null,
+    "comments": "Final answer accurately compares the steps, speed, and result quality using pages 5 and 7. However, most sentences lack individual citations, and the standard K-means explanation should cite page 5. The first attempt contained a contradictory result-quality statement, corrected in the retry."
+  },
+  {
+    "id": "q04",
+    "relevance": "high",
+    "faithfulness": "high",
+    "citation_correct": "partial",
+    "completeness": "high",
+    "abstention_ok": null,
+    "comments": "K-means explanation is supported by page 5, but all sentences cite page 8. The introductory sentence is also uncited."
+  },
+  {
+    "id": "q05",
+    "relevance": "high",
+    "faithfulness": "high",
+    "citation_correct": "high",
+    "completeness": "high",
+    "abstention_ok": null,
+    "comments": "The answer covers Spectral Clustering's method, efficiency, cluster-count requirement, and limitations. All sentences cite Clustering.pdf page 10; the image-related claim is supported by the second retrieved passage despite the automated weak-match warning."
+  },
+  {
+    "id": "q06",
+    "relevance": null,
+    "faithfulness": null,
+    "citation_correct": null,
+    "completeness": null,
+    "abstention_ok": true,
+    "comments": "Correct abstention: the PDFs did not contain relevant evidence about backpropagation."
+  },
+  {
+    "id": "q07",
+    "relevance": null,
+    "faithfulness": null,
+    "citation_correct": null,
+    "completeness": null,
+    "abstention_ok": true,
+    "comments": "Correct abstention: the question 'How does it work?' is ambiguous without a clear referent."
+  },{
+    "id": "q08",
+    "relevance": null,
+    "faithfulness": null,
+    "citation_correct": null,
+    "completeness": null,
+    "abstention_ok": true,
+    "comments": "Correct abstention: the retrieved decision-tree pruning passages are unrelated to pruning a mango tree."
+  },
+  {
+    "id": "q09",
+    "relevance": "high",
+    "faithfulness": "partial",
+    "citation_correct": "partial",
+    "completeness": "high",
+    "abstention_ok": null,
+    "comments": "The comparison is supported by Clustering.pdf page 4 and Decision Trees.pdf page 1. Most sentences lack their own citations, so claims are not individually traceable."
+  },
+  {
+    "id": "q10",
+    "relevance": "high",
+    "faithfulness": "high",
+    "citation_correct": "partial",
+    "completeness": "high",
+    "abstention_ok": null,
+    "comments": "The prediction descriptions are supported by Linear Models.pdf page 1 and Decision Trees.pdf page 1. One sentence lacks its own citation."
+  },
+  {
+    "id": "q11",
+    "relevance": "high",
+    "faithfulness": "high",
+    "citation_correct": "high",
+    "completeness": "high",
+    "abstention_ok": null,
+    "comments": "The answer accurately explains that multicollinearity makes the least-squares estimate sensitive to random target errors and increases variance. The claim is cited to Linear Models.pdf page 2."
+  },
+  {
+    "id": "q12",
+    "relevance": "high",
+    "faithfulness": "high",
+    "citation_correct": "partial",
+    "completeness": "high",
+    "abstention_ok": null,
+    "comments": "The summary covers the main SVM uses, advantages, and disadvantages from Support Vector Machines.pdf page 1. Most sentences lack individual citations, so the answer is not fully traceable sentence by sentence."
+  },
+  {
+    "id": "q13",
+    "relevance": null,
+    "faithfulness": null,
+    "citation_correct": null,
+    "completeness": null,
+    "abstention_ok": true,
+    "comments": "Correct abstention: the retrieved decision-tree passages do not explain how Random Forest combines predictions from multiple trees."
+  },
+  {
+    "id": "q14",
+    "relevance": null,
+    "faithfulness": null,
+    "citation_correct": null,
+    "completeness": null,
+    "abstention_ok": true,
+    "comments": "Correct abstention: 'Which one is better?' is ambiguous because the options being compared are not specified."
+  },
+  {
+    "id": "q15",
+    "relevance": null,
+    "faithfulness": null,
+    "citation_correct": null,
+    "completeness": null,
+    "abstention_ok": true,
+    "comments": "Correct abstention: the PDFs describe decision trees for machine-learning tasks but do not provide enough evidence for planning a birthday party."
+  }
+]

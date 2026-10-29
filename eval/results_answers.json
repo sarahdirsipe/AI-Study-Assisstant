@@ -1,0 +1,50 @@
+{
+  "settings": {
+    "llm_model": "qwen2.5:3b",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "num_ctx": 3072,
+    "num_predict": 320,
+    "top_k": 3,
+    "compare_top_k": 4,
+    "min_similarity": 0.25,
+    "weak_similarity": 0.35,
+    "relative_cutoff": 0.75,
+    "weak_support": 0.3,
+    "llm_cold_start_s": null
+  },
+  "results": [
+    {
+      "id": "q01",
+      "type": "direct",
+      "question": "What are the main steps of the K-means algorithm?",
+      "answerable": true,
+      "expected_pages": [
+        "Clustering.pdf p5"
+      ],
+      "routed_to": "retrieve+answer",
+      "retrieval_status": "ok",
+      "retrieval_s": 0.014480399999911242,
+      "answer_s": null,
+      "total_s": 1.0297224000000824,
+      "answer_status": null,
+      "answer": null,
+      "message": null,
+      "cited_pages": [],
+      "cited_on_labeled_pages": null,
+      "notes": [],
+      "retrieved": [],
+      "attempts": 1,
+      "retried": false,
+      "ollama_wall_s": 1.014530200000081,
+      "ollama_prompt_s": 0,
+      "ollama_generation_s": 0,
+      "raw_replies": [],
+      "summary": null,
+      "error": {
+        "type": "OllamaError",
+        "message": "Ollama did not answer within 1 seconds. The model may still be loading or the machine may be busy. Try again, or raise OLLAMA_TIMEOUT."
+      },
+      "auto_first_pass": "error (OllamaError)"
+    }
+  ]
+}
